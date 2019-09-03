@@ -1,0 +1,8 @@
+23b.glb filter=lfs diff=lfs merge=lfs -text
+23c.glb filter=lfs diff=lfs merge=lfs -text
+U1_cropped.glb filter=lfs diff=lfs merge=lfs -text
+V456cropped.glb filter=lfs diff=lfs merge=lfs -text
+exportVR_V4,5,6.glb filter=lfs diff=lfs merge=lfs -text
+grass.glb filter=lfs diff=lfs merge=lfs -text
+hedge.glb filter=lfs diff=lfs merge=lfs -text
+shrubs.glb filter=lfs diff=lfs merge=lfs -text

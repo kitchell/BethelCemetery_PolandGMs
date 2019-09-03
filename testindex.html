@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Poland Family</title>
+    <meta name="description" content="Poland Family Grave Markers at Bethel Cemetery WebVR">
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v5.1.0/dist/aframe-extras.min.js"></script>
+<!--    <script src="https://unpkg.com/aframe-simple-sun-sky@^1.2.2/simple-sun-sky.js"></script>-->
+
+  </head>
+  <body>
+
+    <a-scene background="color: black" loading-screen="dotsColor: green; backgroundColor: black">
+
+        <a-simple-sun-sky sun-position="1 1 0" fog-color="#578ABD" light-color="#6CB5FE" dark-color="#6AA3DC"></a-simple-sun-sky>
+
+      
+        <a-assets timeout="40000">
+            <a-asset-item id="tree1model" src="./assets/models/23c.glb"></a-asset-item>
+
+        </a-assets>
+        
+
+        
+        <a-entity id="rig"
+          movement-controls
+          position="0 0 0"
+          rotation="0 0 0">
+            <a-entity camera
+            position="0 1.6 0"
+            look-controls="pointerLockEnabled: true"></a-entity>
+<!--            <a-entity id="birdsounds" sound="src: #birds; autoplay: true; loop: true"></a-entity>-->
+        </a-entity>
+        
+<!--        models -->
+
+        <a-entity id="tree1" gltf-model="#tree1model" position="1 10 1" scale=".2 .2 .2"></a-entity>
+
+<!--        lighting -->
+        <a-light type="ambient" color="#BBB" castShadow="true" intensity="1.5"></a-light>
+
+
+    </a-scene>
+  </body>
+</html>

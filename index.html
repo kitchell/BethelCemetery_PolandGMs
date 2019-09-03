@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Poland Family</title>
+    <meta name="description" content="Poland Family Grave Markers at Bethel Cemetery WebVR">
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v5.1.0/dist/aframe-extras.min.js"></script>
+<!--    <script src="https://unpkg.com/aframe-simple-sun-sky@^1.2.2/simple-sun-sky.js"></script>-->
+
+  </head>
+  <body>
+
+    <a-scene background="color: black" loading-screen="dotsColor: green; backgroundColor: black" stats>
+
+<!--        <a-simple-sun-sky sun-position="1 1 0" fog-color="#578ABD" light-color="#6CB5FE" dark-color="#6AA3DC"></a-simple-sun-sky>-->
+
+      
+        <a-assets timeout="40000">
+<!--
+            <a-asset-item id="tree1model" src="./assets/models/23c.glb"></a-asset-item>
+            <a-asset-item id="tree2model" src="./assets/models/23b.glb"></a-asset-item>
+-->
+            <a-asset-item id="U1model" src="./assets/models/U1_cropped.glb"></a-asset-item>
+            <a-asset-item id="V456model" src="./assets/models/V456cropped.glb"></a-asset-item>
+            <a-asset-item id="grass" src="./assets/models/scene.gltf"></a-asset-item>
+<!--            <a-asset-item id="shrubs" src="./assets/models/shrubs.glb"></a-asset-item>-->
+<!--            <a-asset-item id="hedge" src="./assets/models/hedge.glb"></a-asset-item>-->
+            
+            <img id="grassimg" src="./assets/imgs/TexturesCom_GrassDead0104_1_seamless_S.jpg">
+            <img id="skyimg" crossorigin="anonymous"  src="./assets/imgs/CGSkies_0339_free_background.jpg">
+<!--            <img id="hedge" src="./assets/imgs/TexturesCom_Hedges0060_1_seamless_S.jpg">-->
+
+<!--            <audio id="birds" src="./assets/sounds/birds.mp3" preload="auto"></audio>-->
+        </a-assets>
+        
+        <a-sky id="sky" src="#skyimg" radius="2500"></a-sky>
+        
+        <a-entity id="rig"
+          movement-controls
+          position="1 0 1"
+          rotation="0 0 0">
+            <a-entity camera
+            position="0 1.4 0"
+            look-controls="pointerLockEnabled: true"></a-entity>
+<!--            <a-entity id="birdsounds" sound="src: #birds; autoplay: true; loop: true"></a-entity>-->
+        </a-entity>
+        
+<!--        models -->
+        <a-entity id="U1" gltf-model="#U1model" rotation="-24.74 6.882 0.743" position="-0.688 0.514 -1.341" scale="1 1 1"></a-entity>
+        <a-entity id="V456" gltf-model="#V456model" rotation="-17.43 -117.7 0" position="-1.043 2.54 -3.025" scale="1 1 1"></a-entity>
+        <a-entity id="gr" gltf-model="#grass" rotation="0 0 0" position=".25 0 -.8" scale=".15 .02 .15"></a-entity>
+<!--        <a-entity id="gr2" gltf-model="#grass" rotation="0 0 0" position="-2.53 0 3.288" scale=".35 .02 .35"></a-entity>-->
+<!--        <a-entity id="sh" gltf-model="#shrubs" rotation="0 0 0" position="-0.19 1.024 -.250" scale=".5 .5 .5"></a-entity>-->
+<!--        <a-entity id="hdg" gltf-model="#hedge" rotation="0 0 0" position="-3 0 -.8" scale=".1 .1 .1"></a-entity>-->
+
+<!--
+        <a-entity id="tree1" gltf-model="#tree1model" position="1.43 1.282 -31.8" scale=".004 .004 .004"></a-entity>
+        <a-entity id="tree2" gltf-model="#tree2model" position="9.499 -0.429 -5.413" scale=".002 .002 .002"></a-entity>
+-->
+
+<!--            <a-box src="#hedge" position="2 0 -5" scale="6 3 1.5" repeat="6 3 1.5" color="#384325"></a-box>-->
+        
+<!--        lighting -->
+        <a-light type="ambient" color="#BBB" castShadow="true" intensity="2"></a-light>
+<!--
+        <a-light light="type: spot; color: #EEE; intensity: 4" position="-1 1 -0.625" target="#V"><a-entity id="V" position="2.15 -0.014 -0.169" visible=""></a-entity>
+        </a-light>
+-->
+
+<!--        <a-light type="ambient" color="#BBB" castShadow="true" intensity="1" target="#R4 #C9 #V23"></a-light>-->
+<!--
+        <a-light type="spot" color="#BBB" castShadow="true" intensity="4.5" angle="20" position="0 2 0" 
+                 decay=".2" distance="5" target="#left">
+        <a-entity id="left" position="-4.304 -1 -1.736" visible=""></a-entity></a-light>
+-->
+        
+<!--        grass -->
+        <a-plane id="grass" material="src:#grassimg; repeat:30 30" rotation="-90 0 0" scale="70 70 1" color="#384325"></a-plane>
+<!--        color:#314106;-->
+    </a-scene>
+  </body>
+</html>
